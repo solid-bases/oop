@@ -134,7 +134,6 @@ but written in this way:
 
 > **e**rrors = (**m**ore **c**ode)²
 
-
 ## Encapsulation
 
 We have already implicitly explained what encapsulation is: the ability to prevent that external code to being concerned with the internal workings of an object.
