@@ -4,7 +4,7 @@ Data abstraction is a design pattern.
 
 Its purpose is to prevent misuse of the data contained in a class.
 
-It is reached hiding the field containing the data and allow a controlled access through methods.
+It is reached hiding the field containing the data and allowing a controlled access through methods.
 
 Let's see an example on the `pattern` field of `GreyPattern` class:
 
@@ -16,13 +16,13 @@ internal class GreyPattern
 }
 ```
 
-As the property is marked as `public`, external objects are allowed to see and manipulate it, including change its data.
+As the property is marked as `public`, external objects are allowed to see and manipulate it, including the changes of its data.
 
 This can be potentially very dangerous and have to be avoided. Only the class should care about its data.
 
 > *Is it really dangerous?*<br />
 > A common problem that often rise in such situation is the object null reference exception.
-> If the not-null condition is not verified at each usage of the field inside the class, and someone could change it from outside, you will surely run up against a `NullReferenceException`.
+> If the not-null condition is not verified at each usage of the field inside the class, and someone could change it from outside, soon or later you will surely run up against a `NullReferenceException`.
 
 Data abstraction is our equipment to get rid of the potential problems:
 
@@ -44,9 +44,9 @@ internal class GreyPattern
 }
 ```
 
-In this case, the `pattern` field is now `private` and not visible from the other classes, but the `GetPattern` and `SetPattern` methods are `internal`, so they are visible o all the classes in the current `dll`.
+In this case, the `pattern` field is now `private` and not visible from the other classes, but the `GetPattern` and `SetPattern` methods are `internal`, so they are visible to all the classes in the current `assembly`.
 
-To set and get `pattern` data methods must be used:
+Now to set and get `pattern` data the methods must be used:
 
 ```csharp
 var greyPattern = new GreyPattern();
@@ -99,7 +99,7 @@ This have a limitation: could only be used with sync getter and setter. If we wa
 
 Short answer: **yes!**
 
-### Long answer: *Why?*
+### Long answer: *why?*
 
 Data abstraction is costless (modern IDE will automatically generate it from fields) and, also if in many cases they will be not used (acting like a «proxy» for the field data), it will allow future evolutions without changing any external code.
 
@@ -144,8 +144,8 @@ In other words: external user will *use* a method like a «locked box» and cann
 This is achieved through the usage of the access modifiers:
 
 * `private`: visible only inside the current class
-* `internal`: visible only from the current `dll` classes
-* `public`: visible to all the classes (also in different `dll`)
+* `internal`: visible only from the current `assembly` classes
+* `public`: visible to all the classes (also in different `assembly`)
 
 There is also another modifier:
 
