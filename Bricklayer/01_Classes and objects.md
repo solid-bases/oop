@@ -1,6 +1,6 @@
 # Classes and objects
 
-The **class** is a definition for the data format and available procedures for a given type or class of object; may also contain data and procedures (known as class methods) themselves, i.e. classes contain the data members and member functions.
+The **class** is a definition for the data format and available procedures for a given type or group of object; may also contain data and procedures (known as class methods) themselves.
 
 The **object** is the instance of a class.
 
