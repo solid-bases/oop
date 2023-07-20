@@ -1,19 +1,5 @@
 ﻿namespace Bricklayer;
 
-enum Color
-{
-    Red,
-    Grey
-}
-
-struct Brick
-{
-    public int Width;
-    public int Height;
-    public int Depth;
-    public Color Color;
-}
-
 internal partial class Program
 {
     private static void Main(string[] args)

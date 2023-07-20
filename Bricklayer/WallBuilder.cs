@@ -6,28 +6,20 @@ internal class WallBuilder
     private int totalWidth = 180;
     private int totalHeight = 90;
 
-    private Brick cubicRedBrick = new Brick
+    private Brick NewRedCubicBrick() => new RedCubicBrick
     {
-        Width = 10,
-        Height = 10,
-        Depth = 10,
+        Size = 10,
         Color = Color.Red
     };
 
-    private Brick parallelepipedRedBrick = new Brick
+    private Brick NewRedParallelepipedBrick() => new RedParallelepipedBrick
     {
-        Width = 20,
-        Height = 10,
-        Depth = 10,
-        Color = Color.Red
+        Width = 20
     };
 
-    private Brick parallelepipedGreyBrick = new Brick
+    private Brick NewGreyParallelepipedBrick() => new GreyParallelepipedBrick
     {
-        Width = 20,
-        Height = 10,
-        Depth = 10,
-        Color = Color.Grey
+        Width = 20
     };
 
     public WallBuilder(GreyPattern greyPattern)
@@ -71,10 +63,10 @@ internal class WallBuilder
         int builtWidth = 0;
         int currentColNumber = 1;
 
-        Brick currentBrick = parallelepipedRedBrick;
+        Brick currentBrick = NewRedParallelepipedBrick();
         while (builtWidth < totalWidth)
         {
-            bool lastCol = builtWidth + parallelepipedRedBrick.Width >= totalWidth;
+            bool lastCol = builtWidth + NewRedParallelepipedBrick().Width >= totalWidth;
 
             currentBrick = PlaceBrickInRow(currentColNumber, currentRowNumber, lastCol);
             currentRow[currentColNumber - 1] = currentBrick;
@@ -91,10 +83,10 @@ internal class WallBuilder
 
     private Brick PlaceBrickInRow(int currentColNumber, int currentRowNumber, bool lastCol)
     {
-        Brick currentBrick = parallelepipedRedBrick;
+        Brick currentBrick = NewRedParallelepipedBrick();
         if (greyPattern.IsContainingBrick(currentColNumber, currentRowNumber))
         {
-            currentBrick = parallelepipedGreyBrick;
+            currentBrick = NewGreyParallelepipedBrick();
         }
 
         bool evenRow = currentRowNumber % 2 == 0;
@@ -104,7 +96,7 @@ internal class WallBuilder
         {
             if (firstCol || lastCol)
             {
-                currentBrick = cubicRedBrick;
+                currentBrick = NewRedCubicBrick();
             }
         }
 
