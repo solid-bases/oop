@@ -1,4 +1,4 @@
-namespace Bricklayer;
+namespace Bricklayer.WallGenerators;
 
 internal class WallGeneratorFactory
 {

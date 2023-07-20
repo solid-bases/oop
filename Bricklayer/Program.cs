@@ -1,4 +1,6 @@
-﻿namespace Bricklayer;
+﻿using Bricklayer.WallGenerators;
+
+namespace Bricklayer;
 
 internal partial class Program
 {

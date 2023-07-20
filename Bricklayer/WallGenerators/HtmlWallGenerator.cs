@@ -1,6 +1,6 @@
 using System.Text;
 
-namespace Bricklayer;
+namespace Bricklayer.WallGenerators;
 
 internal class HtmlWallGenerator : IWallGenerator
 {
