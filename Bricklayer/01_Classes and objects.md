@@ -8,6 +8,32 @@ The purpose of a class is to *encapsulate* (i.e. isolate) an entity and consider
 
 There are many kind of classes, each of those explained by a well-defined design pattern.
 
+## Constructor
+
+The constructor is a method used to provide the initialization data to the creating instance of the object.
+
+The return of the constructor is the instance of the new object.
+
+```csharp
+public class Rectangle {
+    public Rectangle() {
+        // this is the constructor
+    }
+}
+```
+
+## Static members
+
+Static members are global class member. They don't need an instance because they are assigned to the class definition itself.
+
+```csharp
+public class Rectangle {
+    static string TypeOfGeometry => "Euclidean"
+}
+```
+
+In the example, the `Rectangle.TypeOfGeometry` will have the same value, because it is related to the class definition itself and its value is shared across all the instances.
+
 ## Example
 
 A bank account could be a good class: it has data, it has operations that could be made on it.
