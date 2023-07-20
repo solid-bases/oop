@@ -3,11 +3,19 @@ namespace Bricklayer;
 internal class GreyPattern
 {
     private RowPattern[] pattern;
-    internal RowPattern[] GetPattern() {
-        return pattern;
-    }
-    internal void SetPattern(RowPattern[] value) {
-        pattern = value;
+
+    internal RowPattern[] Pattern
+    {
+        get => pattern;
+        set
+        {
+            if (value == null)
+            {
+                pattern = new RowPattern[0];
+                return;
+            }
+            pattern = value;
+        }
     }
 
     public GreyPattern(RowPattern[] pattern)
