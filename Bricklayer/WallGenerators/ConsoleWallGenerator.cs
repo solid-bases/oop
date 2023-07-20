@@ -1,15 +1,15 @@
 namespace Bricklayer;
 
-internal class PrintWall
+internal class ConsoleWallGenerator : IWallGenerator
 {
     private readonly RowBricks[] wall;
 
-    public PrintWall(RowBricks[] wall)
+    public ConsoleWallGenerator(RowBricks[] wall)
     {
         this.wall = wall;
     }
 
-    public void Print()
+    public void Generate()
     {
 
         // print the wall

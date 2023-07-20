@@ -4,7 +4,6 @@ internal partial class Program
 {
     private static void Main(string[] args)
     {
-
         GreyPattern greyPattern = new GreyPattern(new[] {
             new RowPattern {
                 RowNumber = 3,
@@ -31,8 +30,8 @@ internal partial class Program
         WallBuilder builder = new(greyPattern);
         RowBricks[] wall = builder.BuildWall();
 
-        PrintWall printer = new PrintWall(wall);
-        printer.Print();
+        IWallGenerator printer = WallGeneratorFactory.NewGenerator(wall);
+        printer.Generate();
 
     }
 
