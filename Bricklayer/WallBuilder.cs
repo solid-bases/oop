@@ -66,7 +66,7 @@ internal class WallBuilder
         Brick currentBrick = NewRedParallelepipedBrick();
         while (builtWidth < totalWidth)
         {
-            bool lastCol = builtWidth + NewRedParallelepipedBrick().Width >= totalWidth;
+            bool lastCol = builtWidth + currentBrick.Width >= totalWidth;
 
             currentBrick = PlaceBrickInRow(currentColNumber, currentRowNumber, lastCol);
             currentRow[currentColNumber - 1] = currentBrick;
