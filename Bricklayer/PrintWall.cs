@@ -2,7 +2,7 @@ namespace Bricklayer;
 
 internal class PrintWall
 {
-    public readonly RowBricks[] wall;
+    private readonly RowBricks[] wall;
 
     public PrintWall(RowBricks[] wall)
     {
@@ -42,19 +42,19 @@ internal class PrintWall
         }
     }
 
-    public static void RedConsole()
+    private static void RedConsole()
     {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.BackgroundColor = ConsoleColor.Red;
     }
 
-    public static void DarkRedConsole()
+    private static void DarkRedConsole()
     {
         Console.ForegroundColor = ConsoleColor.DarkRed;
         Console.BackgroundColor = ConsoleColor.DarkRed;
     }
 
-    public static void GreyConsole()
+    private static void GreyConsole()
     {
         Console.ForegroundColor = ConsoleColor.Gray;
         Console.BackgroundColor = ConsoleColor.Gray;

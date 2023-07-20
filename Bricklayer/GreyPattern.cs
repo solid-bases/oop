@@ -2,12 +2,19 @@ namespace Bricklayer;
 
 internal class GreyPattern
 {
-    public RowPattern[] pattern;
+    private RowPattern[] pattern;
+    internal RowPattern[] GetPattern() {
+        return pattern;
+    }
+    internal void SetPattern(RowPattern[] value) {
+        pattern = value;
+    }
 
     public GreyPattern(RowPattern[] pattern)
     {
         this.pattern = pattern;
     }
+
 
     public bool IsContainingBrick(int currentColNumber, int currentRowNumber)
     {

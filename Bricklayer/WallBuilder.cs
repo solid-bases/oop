@@ -2,11 +2,11 @@ namespace Bricklayer;
 
 internal class WallBuilder
 {
-    public readonly GreyPattern greyPattern;
-    public int totalWidth = 180;
-    public int totalHeight = 90;
+    private readonly GreyPattern greyPattern;
+    private int totalWidth = 180;
+    private int totalHeight = 90;
 
-    public Brick cubicRedBrick = new Brick
+    private Brick cubicRedBrick = new Brick
     {
         Width = 10,
         Height = 10,
@@ -14,7 +14,7 @@ internal class WallBuilder
         Color = Color.Red
     };
 
-    public Brick parallelepipedRedBrick = new Brick
+    private Brick parallelepipedRedBrick = new Brick
     {
         Width = 20,
         Height = 10,
@@ -22,7 +22,7 @@ internal class WallBuilder
         Color = Color.Red
     };
 
-    public Brick parallelepipedGreyBrick = new Brick
+    private Brick parallelepipedGreyBrick = new Brick
     {
         Width = 20,
         Height = 10,
@@ -64,7 +64,7 @@ internal class WallBuilder
         return wall;
     }
 
-    public Brick[] NewBricksRow(int currentRowNumber)
+    private Brick[] NewBricksRow(int currentRowNumber)
     {
         Brick[] currentRow = new Brick[1];
 
@@ -89,7 +89,7 @@ internal class WallBuilder
         return currentRow;
     }
 
-    public Brick PlaceBrickInRow(int currentColNumber, int currentRowNumber, bool lastCol)
+    private Brick PlaceBrickInRow(int currentColNumber, int currentRowNumber, bool lastCol)
     {
         Brick currentBrick = parallelepipedRedBrick;
         if (greyPattern.IsContainingBrick(currentColNumber, currentRowNumber))
