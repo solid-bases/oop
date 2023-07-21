@@ -1,3 +1,5 @@
+using Bricklayer.Builder;
+
 namespace Bricklayer.WallGenerators;
 
 internal class WallGeneratorFactory

@@ -1,4 +1,4 @@
-namespace Bricklayer;
+namespace Bricklayer.Builder;
 
 internal struct RowPattern
 {

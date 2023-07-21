@@ -1,4 +1,5 @@
-﻿using Bricklayer.WallGenerators;
+﻿using Bricklayer.Builder;
+using Bricklayer.WallGenerators;
 
 namespace Bricklayer;
 

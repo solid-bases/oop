@@ -1,3 +1,6 @@
+using Bricklayer.Bricks;
+using Bricklayer.Builder;
+
 namespace Bricklayer.WallGenerators;
 
 internal class ConsoleWallGenerator : IWallGenerator
@@ -19,7 +22,7 @@ internal class ConsoleWallGenerator : IWallGenerator
             Console.Write($"Row {row.RowNumber} ");
             foreach (var brick in row.Bricks)
             {
-                if (brick.Color == Color.Grey)
+                if (brick.Color == BrickColor.Grey)
                 {
                     GreyConsole();
                 }

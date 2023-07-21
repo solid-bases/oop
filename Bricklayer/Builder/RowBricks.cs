@@ -1,4 +1,6 @@
-namespace Bricklayer;
+using Bricklayer.Bricks;
+
+namespace Bricklayer.Builder;
 
 internal struct RowBricks
 {

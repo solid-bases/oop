@@ -1,5 +1,8 @@
 using System.Text;
 
+using Bricklayer.Bricks;
+using Bricklayer.Builder;
+
 namespace Bricklayer.WallGenerators;
 
 internal class HtmlWallGenerator : IWallGenerator
@@ -21,7 +24,7 @@ internal class HtmlWallGenerator : IWallGenerator
             builder.Append($"Row {row.RowNumber} ");
             foreach (var brick in row.Bricks)
             {
-                if (brick.Color == Color.Grey)
+                if (brick.Color == BrickColor.Grey)
                 {
                     builder.Append("<span style='color: grey; background-color: grey;'>");
                 }

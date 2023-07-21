@@ -1,4 +1,6 @@
-namespace Bricklayer;
+using Bricklayer.Bricks;
+
+namespace Bricklayer.Builder;
 
 internal class WallBuilder
 {
@@ -9,7 +11,7 @@ internal class WallBuilder
     private Brick NewRedCubicBrick() => new RedCubicBrick
     {
         Size = 10,
-        Color = Color.Red
+        Color = BrickColor.Red
     };
 
     private Brick NewRedParallelepipedBrick() => new RedParallelepipedBrick
@@ -49,7 +51,7 @@ internal class WallBuilder
             builtHeight += currentRow[0].Height;
             if (builtHeight < totalHeight)
             {
-                Array.Resize<RowBricks>(ref wall, currentRowNumber);
+                Array.Resize(ref wall, currentRowNumber);
             }
         }
 
@@ -75,7 +77,7 @@ internal class WallBuilder
             currentColNumber++;
             if (!lastCol)
             {
-                Array.Resize<Brick>(ref currentRow, currentColNumber);
+                Array.Resize(ref currentRow, currentColNumber);
             }
         }
         return currentRow;
