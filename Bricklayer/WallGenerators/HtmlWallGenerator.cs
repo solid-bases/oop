@@ -43,5 +43,9 @@ internal class HtmlWallGenerator : IWallGenerator
         }
         builder.Append("</body></html>");
         File.WriteAllText("wall.html", builder.ToString());
+
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"{Environment.NewLine}wall.html file has been generated.");
+        Console.ResetColor();
     }
 }
