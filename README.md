@@ -21,6 +21,12 @@ Steps are subsequent: step 2 starts from step 1 and so on.
 * ...
 * last step contains the fully refactored code, using all OOP functionalities
 
+### Remarks
+
+As the `steps` are sequential, an edit to the previous branch should be merged to the next step:
+
+![Branching](branching.png)
+
 ## Further reading
 
 There's a resource that excellently give a lot of readings that can be used to learn and understand OOP approach: [Wikipedia](https://en.wikipedia.org/wiki/Object-oriented_programming#Further_reading).
