@@ -1,6 +1,6 @@
-﻿
+﻿namespace Bricklayer;
 
-internal class Program
+internal static class Program
 {
     enum Color
     {
@@ -118,8 +118,9 @@ internal class Program
 
                 builtWidth += currentBrick.Width;
                 currentColNumber++;
-                if (!lastCol) {
-                    Array.Resize<Brick>(ref currentRow, currentColNumber);
+                if (!lastCol)
+                {
+                    Array.Resize(ref currentRow, currentColNumber);
                 }
             }
 
@@ -131,8 +132,9 @@ internal class Program
 
             currentRowNumber++;
             builtHeight += currentBrick.Height;
-            if (builtHeight < totalHeight) {
-                Array.Resize<RowBricks>(ref wall, currentRowNumber);
+            if (builtHeight < totalHeight)
+            {
+                Array.Resize(ref wall, currentRowNumber);
             }
         }
 
@@ -167,7 +169,8 @@ internal class Program
 
     }
 
-    private static void RedConsole() {
+    private static void RedConsole()
+    {
         Console.ForegroundColor = ConsoleColor.Red;
         Console.BackgroundColor = ConsoleColor.Red;
     }
