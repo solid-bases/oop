@@ -2,7 +2,7 @@
 
 namespace Bricklayer;
 
-internal partial class Program
+internal static class Program
 {
     private static void Main(string[] args)
     {
