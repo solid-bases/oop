@@ -88,7 +88,7 @@ class Square {
         this.rectangle = rectangle;
     }
     public double Area() => rectangle.Area();
-    public double Perimeter() => rectangle.Perimeter;
+    public double Perimeter() => rectangle.Perimeter();
 }
 
 // Usage
